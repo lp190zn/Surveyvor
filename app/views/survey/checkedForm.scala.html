@@ -1,0 +1,946 @@
+@(survey: Survey,userAnswers: UserAnswers, form1: Form[Survey], results: String)
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@mainAfter(Html("Your result..."), nav = "creating") {
+    
+   
+    @helper.form(action = routes.CreateSurvey.newIndex()) {
+    
+		
+   		<h2>@survey.title</h2>
+
+
+    		<h6>1. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question1</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			@if(survey.answerFirst1 == survey.rightAnswerFirst) {
+			    @if(userAnswers.answerFirst == survey.answerFirst1) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst1 checked>
+  					@survey.answerFirst1 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst1>
+  					@survey.answerFirst1 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFirst == survey.answerFirst1) {
+  				@if(survey.answerFirst1 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst1 checked>
+  					@survey.answerFirst1 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFirst != survey.answerFirst1) {
+  				@if(survey.answerFirst1 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst1>
+  					@survey.answerFirst1
+  			</label>
+  			}
+  			}
+  			
+  			</br>
+   			</br>
+   			
+   			@if(survey.answerFirst2 == survey.rightAnswerFirst) {
+			    @if(userAnswers.answerFirst == survey.answerFirst2) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst2 checked>
+  					@survey.answerFirst2 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst2>
+  					@survey.answerFirst2 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFirst == survey.answerFirst2) {
+  				@if(survey.answerFirst2 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst2 checked>
+  					@survey.answerFirst2 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFirst != survey.answerFirst2) {
+  				@if(survey.answerFirst2 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst2>
+  					@survey.answerFirst2 
+  			</label>
+  			}
+  			}
+  			
+   			
+   			</br>
+   			</br>
+			
+			@if(survey.answerFirst3 == survey.rightAnswerFirst) {
+			    @if(userAnswers.answerFirst == survey.answerFirst3) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst3 checked>
+  					@survey.answerFirst3 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst3>
+  					@survey.answerFirst3 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFirst == survey.answerFirst3) {
+  				@if(survey.answerFirst3 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst3 checked>
+  					@survey.answerFirst3 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFirst != survey.answerFirst3) {
+  				@if(survey.answerFirst3 != survey.rightAnswerFirst) {
+  					@if(survey.answerFirst3 != null && survey.answerFirst3 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst3>
+  					@survey.answerFirst3 
+  			</label>
+  			
+  			}
+  			}
+  			}
+  				
+  			</br>
+   			</br>		
+			
+     		@if(survey.answerFirst4 == survey.rightAnswerFirst) {
+			    @if(userAnswers.answerFirst == survey.answerFirst4) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst4 checked>
+  					@survey.answerFirst4 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst4>
+  					@survey.answerFirst4 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFirst == survey.answerFirst4) {
+  				@if(survey.answerFirst4 != survey.rightAnswerFirst) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst4 checked>
+  					@survey.answerFirst4 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFirst != survey.answerFirst4) {
+  				@if(survey.answerFirst4 != survey.rightAnswerFirst) {
+  					@if(survey.answerFirst4 != null && survey.answerFirst4 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value= @survey.answerFirst4>
+  					@survey.answerFirst4
+  			</label>
+
+  			}
+  			}
+  			}
+   			</br>
+   			</br>
+   		
+
+			<h6>2. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question2</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			@if(survey.answerSec1 == survey.rightAnswerSec) {
+			    @if(userAnswers.answerSec == survey.answerSec1) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec1 checked>
+  					@survey.answerSec1 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec1>
+  					@survey.answerSec1 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerSec == survey.answerSec1) {
+  				@if(survey.answerSec1 != survey.rightAnswerSec) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec1 checked>
+  					@survey.answerSec1 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerSec != survey.answerSec1) {
+  				@if(survey.answerSec1 != survey.rightAnswerSec) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec1>
+  					@survey.answerSec1 
+  			</label>
+  			}
+  			}
+  			
+  			</br>
+   			</br>
+   			
+   			@if(survey.answerSec2 == survey.rightAnswerSec) {
+			    @if(userAnswers.answerSec == survey.answerSec2) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec2 checked>
+  					@survey.answerSec2 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec2>
+  					@survey.answerSec2 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerSec == survey.answerSec2) {
+  				@if(survey.answerSec2 != survey.rightAnswerSec) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec2 checked>
+  					@survey.answerSec2 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerSec != survey.answerSec2) {
+  				@if(survey.answerSec2 != survey.rightAnswerSec) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec2>
+  					@survey.answerSec2 
+  			</label>
+  			}
+  			}
+  			
+   			
+   			</br>
+   			</br>
+			
+			@if(survey.answerSec3 == survey.rightAnswerSec) {
+			    @if(userAnswers.answerSec == survey.answerSec3) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec3 checked>
+  					@survey.answerSec3 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec3>
+  					@survey.answerSec3 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerSec == survey.answerSec3) {
+  				@if(survey.answerSec3 != survey.rightAnswerSec) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec3 checked>
+  					@survey.answerSec3 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerSec != survey.answerSec3) {
+  				@if(survey.answerSec3 != survey.rightAnswerSec) {
+  					@if(survey.answerSec3 != null && survey.answerSec3 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec3>
+  					@survey.answerSec3 
+  			</label>
+
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+   			
+                        
+
+			
+     		@if(survey.answerSec4 == survey.rightAnswerSec) {
+			    @if(userAnswers.answerSec == survey.answerSec4) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec4 checked>
+  					@survey.answerSec4 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec4>
+  					@survey.answerSec4 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerSec == survey.answerSec4) {
+  				@if(survey.answerSec4 != survey.rightAnswerSec) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec4 checked>
+  					@survey.answerSec4 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerSec != survey.answerSec4) {
+  				@if(survey.answerSec4 != survey.rightAnswerSec) {
+  					@if(survey.answerSec4 != null && survey.answerSec4 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value= @survey.answerSec4>
+  					@survey.answerSec4
+  			</label>
+  			}
+  			}
+  			}
+  			</br>
+   			</br>
+   			
+  
+ 			   			
+   			
+   			<h6>3. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question3</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			@if(survey.answerThird1 == survey.rightAnswerThird) {
+			    @if(userAnswers.answerThird == survey.answerThird1) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird1 checked>
+  					@survey.answerThird1 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird1>
+  					@survey.answerThird1 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerThird == survey.answerThird1) {
+  				@if(survey.answerThird1 != survey.rightAnswerThird) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird1 checked>
+  					@survey.answerThird1 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerThird != survey.answerThird1) {
+  				@if(survey.answerThird1 != survey.rightAnswerThird) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird1>
+  					@survey.answerThird1 
+  			</label>
+  			}
+  			}
+  			
+  			</br>
+   			</br>
+   			
+   			@if(survey.answerThird2 == survey.rightAnswerThird) {
+			    @if(userAnswers.answerThird == survey.answerThird2) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird2 checked>
+  					@survey.answerThird2 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird2>
+  					@survey.answerThird2 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerThird == survey.answerThird2) {
+  				@if(survey.answerThird2 != survey.rightAnswerThird) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird2 checked>
+  					@survey.answerThird2 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerThird != survey.answerThird2) {
+  				@if(survey.answerThird2 != survey.rightAnswerThird) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird2>
+  					@survey.answerThird2 
+  			</label>
+  			}
+  			}
+  			
+   			
+   			</br>
+   			</br>
+			
+			@if(survey.answerThird3 == survey.rightAnswerThird) {
+			    @if(userAnswers.answerThird == survey.answerThird3) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird3 checked>
+  					@survey.answerThird3 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird3>
+  					@survey.answerThird3 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerThird == survey.answerThird3) {
+  				@if(survey.answerThird3 != survey.rightAnswerThird) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird3 checked>
+  					@survey.answerThird3 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerThird != survey.answerThird3) {
+  				@if(survey.answerThird3 != survey.rightAnswerThird) {
+  					@if(survey.answerThird3 != null && survey.answerThird3 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird3>
+  					@survey.answerThird3 
+  			</label>
+  			
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+                        
+
+			
+     		@if(survey.answerThird4 == survey.rightAnswerThird) {
+			    @if(userAnswers.answerThird == survey.answerThird4) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird4 checked>
+  					@survey.answerThird4 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird4>
+  					@survey.answerThird4 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerThird == survey.answerThird4) {
+  				@if(survey.answerThird4 != survey.rightAnswerThird) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird4 checked>
+  					@survey.answerThird4 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerThird != survey.answerThird4) {
+  				@if(survey.answerThird4 != survey.rightAnswerThird) {
+  					@if(survey.answerThird4 != null && survey.answerThird4 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value= @survey.answerThird4>
+  					@survey.answerThird4
+  			</label>
+  			}
+  			}
+  			}	
+    
+    		</br>
+   			</br>
+
+			<h6>4. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question4</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			@if(survey.answerFourth1 == survey.rightAnswerFourth) {
+			    @if(userAnswers.answerFourth == survey.answerFourth1) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth1 checked>
+  					@survey.answerFourth1 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth1>
+  					@survey.answerFourth1 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFourth == survey.answerFourth1) {
+  				@if(survey.answerFourth1 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth1 checked>
+  					@survey.answerFourth1 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFourth != survey.answerFourth1) {
+  				@if(survey.answerFourth1 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth1>
+  					@survey.answerFourth1 
+  			</label>
+  			}
+  			}
+  			
+  			</br>
+   			</br>
+   			
+   			@if(survey.answerFourth2 == survey.rightAnswerFourth) {
+			    @if(userAnswers.answerFourth == survey.answerFourth2) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth2 checked>
+  					@survey.answerFourth2 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth2>
+  					@survey.answerFourth2 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFourth == survey.answerFourth2) {
+  				@if(survey.answerFourth2 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth2 checked>
+  					@survey.answerFourth2 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFourth != survey.answerFourth2) {
+  				@if(survey.answerFourth2 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth2>
+  					@survey.answerFourth2 
+  			</label>
+  			}
+  			}
+  			
+   			
+   			</br>
+   			</br>
+			
+			@if(survey.answerFourth3 == survey.rightAnswerFourth) {
+			    @if(userAnswers.answerFourth == survey.answerFourth3) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth3 checked>
+  					@survey.answerFourth3 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth3>
+  					@survey.answerFourth3 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFourth == survey.answerFourth3) {
+  				@if(survey.answerFourth3 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth3 checked>
+  					@survey.answerFourth3 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFourth != survey.answerFourth3) {
+  				@if(survey.answerFourth3 != survey.rightAnswerFourth) {
+  					@if(survey.answerFourth3 != null && survey.answerFourth3 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth3>
+  					@survey.answerFourth3 
+  			</label>
+  			
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+                        
+
+			
+     		@if(survey.answerFourth4 == survey.rightAnswerFourth) {
+			    @if(userAnswers.answerFourth == survey.answerFourth4) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth4 checked>
+  					@survey.answerFourth4 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth4>
+  					@survey.answerFourth4 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFourth == survey.answerFourth4) {
+  				@if(survey.answerFourth4 != survey.rightAnswerFourth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth4 checked>
+  					@survey.answerFourth4 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFourth != survey.answerFourth4) {
+  				@if(survey.answerFourth4 != survey.rightAnswerFourth) {
+  					@if(survey.answerFourth4 != null && survey.answerFourth4 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value= @survey.answerFourth4>
+  					@survey.answerFourth4
+  			</label>
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+
+   			
+   			<h6>5. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question5</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			@if(survey.answerFifth1 == survey.rightAnswerFifth) {
+			    @if(userAnswers.answerFifth == survey.answerFifth1) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth1 checked>
+  					@survey.answerFifth1 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth1>
+  					@survey.answerFifth1 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFifth == survey.answerFifth1) {
+  				@if(survey.answerFifth1 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth1 checked>
+  					@survey.answerFifth1 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFifth != survey.answerFifth1) {
+  				@if(survey.answerFifth1 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth1>
+  					@survey.answerFifth1 
+  			</label>
+  			}
+  			}
+  			
+  			</br>
+   			</br>
+   			
+   			@if(survey.answerFifth2 == survey.rightAnswerFifth) {
+			    @if(userAnswers.answerFifth == survey.answerFifth2) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth2 checked>
+  					@survey.answerFifth2 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth2>
+  					@survey.answerFifth2 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFifth == survey.answerFifth2) {
+  				@if(survey.answerFifth2 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth2 checked>
+  					@survey.answerFifth2 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFifth != survey.answerFifth2) {
+  				@if(survey.answerFifth2 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth2>
+  					@survey.answerFifth2 
+  			</label>
+  			}
+  			}
+  			
+   			
+   			</br>
+   			</br>
+			
+			@if(survey.answerFifth3 == survey.rightAnswerFifth) {
+			    @if(userAnswers.answerFifth == survey.answerFifth3) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth3 checked>
+  					@survey.answerFifth3 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth3>
+  					@survey.answerFifth3 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFifth == survey.answerFifth3) {
+  				@if(survey.answerFifth3 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth3 checked>
+  					@survey.answerFifth3 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFifth != survey.answerFifth3) {
+  				@if(survey.answerFifth3 != survey.rightAnswerFifth) {
+  					@if(survey.answerFifth3 != null && survey.answerFifth3 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth3>
+  					@survey.answerFifth3 
+  			</label>
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+                        
+
+			
+     		@if(survey.answerFifth4 == survey.rightAnswerFifth) {
+			    @if(userAnswers.answerFifth == survey.answerFifth4) {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth4 checked>
+  					@survey.answerFifth4 <b>OK<b>
+			</label>
+			
+			} else {
+			
+			<label class="radio" style="color:green">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth4>
+  					@survey.answerFifth4 <b>RIGHT<b>
+  			</label>
+  			
+  			}}
+  			
+  			
+  			@if(userAnswers.answerFifth == survey.answerFifth4) {
+  				@if(survey.answerFifth4 != survey.rightAnswerFifth) {
+  			
+  			<label class="radio" style="color:red">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth4 checked>
+  					@survey.answerFifth4 <b>WRONG<b>
+  			</label>
+  			}
+  			}
+  			
+  			@if(userAnswers.answerFifth != survey.answerFifth4) {
+  				@if(survey.answerFifth4 != survey.rightAnswerFifth) {
+  					@if(survey.answerFifth4 != null && survey.answerFifth4 != "") {
+  			
+  			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value= @survey.answerFifth4>
+  					@survey.answerFifth4
+  			</label>
+  			
+  			}
+  			}
+  			}
+   			
+   			</br>
+   			</br>
+   			</br>
+   			
+   			<h2>Your results is @results </h2>
+   			
+
+      <div class="actions">
+            <input type="submit" class="btn primary" value="Back to my surveys">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+        
+
+		</form>
+     }
+    
+}

@@ -1,0 +1,49 @@
+@(contactForm: Form[Login])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@title = {
+    Login <small><a href="@routes.LoginPage.edit"></a></small>
+}
+
+@main(title, nav = "contact") {
+    
+    @if(contactForm.hasErrors) {
+        <div class="alert-message error">
+            <p><strong>Oops</strong> Please fix all errors</p>
+        </div>
+    }
+    
+    @helper.form(action = routes.LoginPage.submit, 'id -> "form") {
+        
+        <fieldset>
+
+            
+            @inputText(
+                contactForm("firstname"), 
+                '_label -> "Login"
+            )
+            
+            @inputPassword(
+                contactForm("password"), 
+                '_label -> "Password"
+            )
+            
+            
+            
+        </fieldset>
+
+            
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" class="btn primary" value="Login">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+    
+    
+}

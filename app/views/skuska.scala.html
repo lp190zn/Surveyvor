@@ -1,0 +1,21 @@
+@(surveys: List[Survey])
+
+@import helper._
+
+@main(Html("my page")) {
+    
+    <h1>@surveys.size() surveys</h1>
+    
+    <ul>
+        @for(survey <- surveys) {
+            <li>
+                @survey.title
+                
+                
+            </li>
+        }
+    </ul>
+    
+
+    
+}

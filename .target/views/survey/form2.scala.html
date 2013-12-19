@@ -1,0 +1,339 @@
+@(survey: Survey, form1: Form[Survey])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@mainAfter(Html("Fill Survey"), nav = "creating") {
+    
+   
+    @helper.form(action = routes.FillSurvey.checkSurvey) {
+    
+
+   		<h2>@survey.title</h2>
+
+
+    		<h6>1. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question1</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			
+			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value=@survey.answerFirst1 checked>
+  					@survey.answerFirst1
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+
+ 			
+			<label class="radio">
+  					<input type="radio" name="question1" id="question1" value=@survey.answerFirst2>
+  					@survey.answerFirst2
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+			
+			@if(survey.answerFirst3 == null || survey.answerFirst3 == "") {
+            
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question1" id="question1" value=@survey.answerFirst3>
+  					@survey.answerFirst3
+			</label>
+            
+            
+            </br>
+   			</br>
+   			</br>
+                        
+        	}
+
+			
+     		@if(survey.answerFirst4 == null || survey.answerFirst4 == "") {
+
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question1" id="question1" value=@survey.answerFirst4>
+  					@survey.answerFirst4
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+			
+   			
+
+			<h6>2. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question2</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			
+			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value=@survey.answerSec1 checked>
+  					@survey.answerSec1
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+
+ 			
+			<label class="radio">
+  					<input type="radio" name="question2" id="question2" value=@survey.answerSec2>
+  					@survey.answerSec2
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+			
+			@if(survey.answerSec3 == null || survey.answerSec3 == "") {
+            
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question2" id="question2" value=@survey.answerSec3>
+  					@survey.answerSec3
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+            
+        	}
+
+     		@if(survey.answerSec4 == null || survey.answerSec4 == "") {
+
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question2" id="question2" value=@survey.answerSec4>
+  					@survey.answerSec4
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+ 			   			
+   			
+   			<h6>3. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question3</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			
+			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value=@survey.answerThird1 checked>
+  					@survey.answerThird1
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+
+ 			
+			<label class="radio">
+  					<input type="radio" name="question3" id="question3" value=@survey.answerThird2>
+  					@survey.answerThird2
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+			
+			@if(survey.answerThird3 == null || survey.answerThird3 == "") {
+            
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question3" id="question3" value=@survey.answerThird3>
+  					@survey.answerThird3
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+
+
+     		@if(survey.answerThird4 == null || survey.answerThird4 == "") {
+
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question4" id="question4" value=@survey.answerThird4>
+  					@survey.answerThird4
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+        	
+        	<h6>4. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question4</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			
+			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value=@survey.answerFourth1 checked>
+  					@survey.answerFourth1
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+
+ 			
+			<label class="radio">
+  					<input type="radio" name="question4" id="question4" value=@survey.answerFourth2>
+  					@survey.answerFourth2
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+			
+			@if(survey.answerFourth3 == null || survey.answerFourth3 == "") {
+            
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question4" id="question4" value=@survey.answerFourth3>
+  					@survey.answerFourth3
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+
+
+     		@if(survey.answerFourth4 == null || survey.answerFourth4 == "") {
+
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question4" id="question4" value=@survey.answerFourth4>
+  					@survey.answerFourth4
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+        	
+        	<h6>5. Question</h6>
+   		
+   		
+ 			<p>
+        	<b>@survey.question4</b>
+    		</p>
+ 				
+ 		
+ 			<form class="form-inline">
+  			
+
+			
+			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value=@survey.answerFifth1 checked>
+  					@survey.answerFifth1
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+
+ 			
+			<label class="radio">
+  					<input type="radio" name="question5" id="question5" value=@survey.answerFifth2>
+  					@survey.answerFifth2
+			</label>
+			
+			</br>
+   			</br>
+   			</br>
+			
+			@if(survey.answerFifth3 == null || survey.answerFifth3 == "") {
+            
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question5" id="question5" value=@survey.answerFifth3>
+  					@survey.answerFifth3
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+
+
+     		@if(survey.answerFourth4 == null || survey.answerFourth4 == "") {
+
+        	} else {
+            
+            <label class="radio">
+  					<input type="radio" name="question5" id="question5" value=@survey.answerFifth4>
+  					@survey.answerFifth4
+			</label>
+            
+            </br>
+   			</br>
+   			</br>
+            
+        	}
+		
+			
+
+      <div class="actions">
+            <input type="submit" class="btn primary" value="Send">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+        
+
+		</form>
+     }
+    
+}

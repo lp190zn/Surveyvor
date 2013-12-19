@@ -1,0 +1,243 @@
+@(newForm: Form[Survey])
+@import helper._
+@import helper.twitterBootstrap._
+
+@title = {
+    <small>Create a new survey</small>
+}
+@mainAfter(title, nav = "New Survey") {
+
+	@helper.form(action = routes.CreateSurvey.preview) {
+		<fieldset>
+		@inputText(
+                newForm("title"), 
+                '_label -> "Title"
+            )
+		</fieldset>
+		
+
+		<fieldset>
+            <legend>Write question and its answers</legend>
+            
+            @inputText(
+                newForm("question1"), 
+                '_label -> "1.Question", 
+                '_help -> "Your question is empty.",
+                '_error -> newForm.globalError
+            )
+        </fieldset>    
+            
+		<fieldset>
+
+            
+            @inputText(
+                newForm("answerFirst1"), 
+                '_label -> "answer1", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFirst2"), 
+                '_label -> "answer2", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFirst3"), 
+                '_label -> "answer3"
+			)
+			 @inputText(
+                newForm("answerFirst4"), 
+                '_label -> "answer4"
+			)
+			
+			@inputText(
+                newForm("rightAnswerFirst"), 
+                '_label -> "rightAnswer",
+                '_help -> "Right Answer."
+			)
+        </fieldset>
+        
+       <fieldset>
+            <legend>Write question and its answers</legend>
+            
+            @inputText(
+                newForm("question2"), 
+                '_label -> "2.Question", 
+                '_help -> "Your question is empty.",
+                '_error -> newForm.globalError
+            )
+        </fieldset>    
+            
+		<fieldset>
+
+            
+            @inputText(
+                newForm("answerSec1"), 
+                '_label -> "answer1", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerSec2"), 
+                '_label -> "answer2", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerSec3"), 
+                '_label -> "answer3"
+			)
+			 @inputText(
+                newForm("answerSec4"), 
+                '_label -> "answer4"
+			)
+			
+			@inputText(
+                newForm("rightAnswerSec"), 
+                '_label -> "rightAnswer",
+                '_help -> "Right Answer."
+			)
+        </fieldset>
+        
+         <fieldset>
+            <legend>Write question and its answers</legend>
+            
+            @inputText(
+                newForm("question3"), 
+                '_label -> "3.Question", 
+                '_help -> "Your question is empty.",
+                '_error -> newForm.globalError
+            )
+        </fieldset>    
+            
+		<fieldset>
+
+            
+            @inputText(
+                newForm("answerThird1"), 
+                '_label -> "answer1", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerThird2"), 
+                '_label -> "answer2", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerThird3"), 
+                '_label -> "answer3"
+			)
+			 @inputText(
+                newForm("answerThird4"), 
+                '_label -> "answer4"
+			)
+			
+			@inputText(
+                newForm("rightAnswerThird"), 
+                '_label -> "rightAnswer",
+                '_help -> "Right Answer."
+			)
+        </fieldset>
+        
+         <fieldset>
+            <legend>Write question and its answers</legend>
+            
+            @inputText(
+                newForm("question4"), 
+                '_label -> "4.Question", 
+                '_help -> "Your question is empty.",
+                '_error -> newForm.globalError
+            )
+        </fieldset>    
+            
+		<fieldset>
+
+            
+            @inputText(
+                newForm("answerFourth1"), 
+                '_label -> "answer1", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFourth2"), 
+                '_label -> "answer2", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFourth3"), 
+                '_label -> "answer3"
+			)
+			 @inputText(
+                newForm("answerFourth4"), 
+                '_label -> "answer4"
+			)
+			
+			@inputText(
+                newForm("rightAnswerFourth"), 
+                '_label -> "rightAnswer",
+                '_help -> "Right Answer."
+			)
+        </fieldset>
+        
+         <fieldset>
+            <legend>Write question and its answers</legend>
+            
+            @inputText(
+                newForm("question5"), 
+                '_label -> "5.Question", 
+                '_help -> "Your question is empty.",
+                '_error -> newForm.globalError
+            )
+        </fieldset>    
+            
+		<fieldset>
+
+            
+            @inputText(
+                newForm("answerFifth1"), 
+                '_label -> "answer1", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFifth2"), 
+                '_label -> "answer2", 
+                '_help -> "Your answer is empty.Two answers are necessary."
+               
+            )
+            @inputText(
+                newForm("answerFifth3"), 
+                '_label -> "answer3"
+			)
+			 @inputText(
+                newForm("answerFifth4"), 
+                '_label -> "answer4"
+			)
+			
+			@inputText(
+                newForm("rightAnswerFifth"), 
+                '_label -> "rightAnswer",
+                '_help -> "Right Answer."
+			)
+        </fieldset>
+        
+        
+		<div class="actions">
+            <input type="submit" class="btn primary" value="Save">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+        
+       
+	
+	
+	
+	
+	
+	}
+
+}

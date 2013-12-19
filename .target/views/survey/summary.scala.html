@@ -1,0 +1,228 @@
+@(survey: Survey)
+
+
+@mainAfter(Html("Survey created!"), nav = "creating") {
+    
+    <h2>Survey</h2>
+    <h5>Title</h5>
+    <p>
+        @survey.title
+    </p>
+    <h6>1. Question</h6>
+    
+    <p>
+        @survey.question1
+    </p>
+    
+    
+    <p>
+    
+     A.   @survey.answerFirst1
+    
+   
+    
+   
+     B.   @survey.answerFirst2
+      
+   
+    
+    
+     C.	@if(survey.answerFirst3 == null || survey.answerFirst3 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFirst3
+        }
+       
+    
+    
+    
+    
+     D.  @if(survey.answerFirst4 == null || survey.answerFirst4 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFirst4
+        }
+        
+     </br>
+     </br>
+     
+     Right Answer: @survey.rightAnswerFirst
+     
+     
+    </p>
+    
+    <h6>2. Question</h6>
+    
+    <p>
+        @survey.question2
+    </p>
+    
+    
+    <p>
+    
+     A.   @survey.answerSec1
+    
+   
+    
+   
+     B.   @survey.answerSec2
+      
+   
+    
+    
+     C.	@if(survey.answerSec3 == null || survey.answerSec3 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerSec3
+        }
+       
+    
+    
+    
+    
+     D.  @if(survey.answerSec4 == null || survey.answerSec4 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerSec4
+        }
+        
+     </br>
+     </br>
+     
+     Right Answer: @survey.rightAnswerSec
+     
+     
+    </p>
+    
+    <h6>3. Question</h6>
+    
+    <p>
+        @survey.question3
+    </p>
+    
+    
+    <p>
+    
+     A.   @survey.answerThird1
+    
+   
+    
+   
+     B.   @survey.answerThird2
+      
+   
+    
+    
+     C.	@if(survey.answerThird3 == null || survey.answerThird3 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerThird3
+        }
+       
+    
+    
+    
+    
+     D.  @if(survey.answerThird4 == null || survey.answerThird4 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerThird4
+        }
+        
+     </br>
+     </br>
+     
+     Right Answer: @survey.rightAnswerThird
+     
+     
+    </p>
+     
+     <h6>4. Question</h6>
+    
+    <p>
+        @survey.question4
+    </p>
+    
+    
+    <p>
+    
+     A.   @survey.answerFourth1
+    
+   
+    
+   
+     B.   @survey.answerFourth2
+      
+   
+    
+    
+     C.	@if(survey.answerFourth3 == null || survey.answerFourth3 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFourth3
+        }
+       
+    
+    
+    
+    
+     D.  @if(survey.answerFourth4 == null || survey.answerFourth4 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFourth4
+        }
+        
+     </br>
+     </br>
+     
+     Right Answer: @survey.rightAnswerFourth
+     
+     
+    </p>
+    
+    <h6>5. Question</h6>
+    
+    <p>
+        @survey.question5
+    </p>
+    
+    
+    <p>
+    
+     A.   @survey.answerFifth1
+    
+   
+    
+   
+     B.   @survey.answerFifth2
+      
+   
+    
+    
+     C.	@if(survey.answerFifth3 == null || survey.answerFifth3 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFifth3
+        }
+       
+    
+    
+    
+    
+     D.  @if(survey.answerFifth4 == null || survey.answerFifth4 == "") {
+            <em>Not specified</em>
+        } else {
+            @survey.answerFifth4
+        }
+        
+     </br>
+     </br>
+     
+     Right Answer: @survey.rightAnswerFifth
+     
+     
+    </p>
+     
+    
+    
+}

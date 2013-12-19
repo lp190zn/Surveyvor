@@ -1,0 +1,61 @@
+@(title: Html, nav: String = "")(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Doodle main page</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        
+        <div class="topbar">
+            <div class="fill">
+                <div class="container">
+                    <a class="brand" href="@routes.Application.index()">Doodle</a>
+                    <ul class="nav">
+                        </li>
+                        <li class="@("active".when(nav == "surveys"))">
+                            <a href="@routes.CreateSurvey.newIndex()">My Surveys</a>
+                        </li>
+                        <li class="@("active".when(nav == "surveys1"))">
+                            <a href="@routes.CreateSurvey.blank()">Create Survey</a>
+                        </li>
+                        
+                        
+                        <li class="@("active".when(nav == "logout"))">
+                           <a href="@routes.LoginPage.blank()">Logout</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="content">
+                
+                <div class="page-header">
+                    <h1>@title</h1>
+                </div>
+
+                <div class="row">
+                    <div class="span14">
+                        @content
+                    </div>
+                </div>
+                
+            </div>
+
+            <footer>
+
+            </footer>
+
+        </div>
+        
+    </body>
+</html>

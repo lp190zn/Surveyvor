@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Login
+GET     /login                      controllers.Register.blank()
+GET     /users/fakeuser             controllers.Register.edit()
+POST    /login                      controllers.Register.submit()
+
+# Register
+GET     /register                   controllers.LoginPage.blank()
+GET     /register/fakecontact       controllers.LoginPage.edit()
+POST    /register                   controllers.LoginPage.submit()
+
+#Survey
+GET    /createsurvey                controllers.CreateSurvey.newIndex()
+GET    /createsurvey/newsurvey      controllers.CreateSurvey.blank()
+
+POST   /createsurvey                controllers.CreateSurvey.preview()
+GET    /previewsurvey				controllers.CreateSurvey.preview()
+
+GET    /surveys/*name               controllers.FillSurvey.viewSurvey(name)  
+
+GET    /checksurvey		   			controllers.FillSurvey.checkSurvey()
+
+POST   /surveys/:id/delete 			controllers.CreateSurvey.delete(id:Long)
+
+# Edit existing computer
+
+GET     /editsurveys/edit/:id       controllers.CreateSurvey.edit(id:Long)
+POST    /editsurveys/edit/:id       controllers.CreateSurvey.update(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

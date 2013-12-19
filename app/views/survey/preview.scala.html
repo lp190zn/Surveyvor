@@ -1,0 +1,144 @@
+@(survey: Survey)
+
+
+@mainAfter(Html("Fill Survey"), nav = "creating") {
+    
+    @helper.form(action = routes.Register.submit) {
+    
+   
+    
+    <h2>@survey.title</h2>
+
+
+    <h6>1. Question</h6>
+    
+    <p>
+        <b>@survey.question1</b>
+    </p>
+    
+    
+    <form action="">
+	<input type="radio" name= @survey.answerFirst1 value= @survey.answerFirst1 > @survey.answerFirst1 <br> <br>
+	<input type="radio" name= @survey.answerFirst1 value= @survey.answerFirst2 > @survey.answerFirst2 <br> <br>
+	
+    
+
+     @if(survey.answerFirst3 == null || survey.answerFirst3 == "") {
+            
+        } else {
+            <input type="radio" name= @survey.answerFirst1 value= @survey.answerFirst3 > @survey.answerFirst3 <br> <br>
+        }
+
+     @if(survey.answerFirst4 == null || survey.answerFirst4 == "") {
+
+        } else {
+            <input type="radio" name= @survey.answerFirst1 value= @survey.answerFirst4 > @survey.answerFirst4 <br> <br>
+        }
+  
+     
+     <h6>2. Question</h6>
+    
+    <p>
+        <b>@survey.question2</b>
+    </p>
+    
+    
+    <form action="">
+	<input type="radio" name= @survey.answerSec1 value= @survey.answerSec1 > @survey.answerSec1 <br> <br>
+	<input type="radio" name= @survey.answerSec1 value= @survey.answerSec2 > @survey.answerSec2 <br> <br>
+	
+    
+
+     @if(survey.answerSec3 == null || survey.answerSec3 == "") {
+            
+        } else {
+            <input type="radio" name= @survey.answerSec1 value= @survey.answerSec3 > @survey.answerSec3 <br> <br>
+        }
+
+     @if(survey.answerSec4 == null || survey.answerSec4 == "") {
+
+        } else {
+            <input type="radio" name= @survey.answerSec1 value= @survey.answerSec4 > @survey.answerSec4 <br> <br>
+        }
+     
+     <h6>3. Question</h6>
+    
+    <p>
+        <b>@survey.question3</b>
+    </p>
+    
+    
+    <form action="">
+	<input type="radio" name= @survey.answerThird1 value= @survey.answerThird1 > @survey.answerThird1 <br> <br>
+	<input type="radio" name= @survey.answerThird1 value= @survey.answerThird2 > @survey.answerThird2 <br> <br>
+	
+    
+
+     @if(survey.answerThird3 == null || survey.answerThird3 == "") {
+            
+        } else {
+            <input type="radio" name= @survey.answerThird1 value= @survey.answerThird3 > @survey.answerThird3 <br> <br>
+        }
+
+     @if(survey.answerThird4 == null || survey.answerThird4 == "") {
+
+        } else {
+            <input type="radio" name= @survey.answerThird1 value= @survey.answerThird4 > @survey.answerThird4 <br> <br>
+        }
+     <h6>4. Question</h6>
+    
+    <p>
+        <b>@survey.question4</b>
+    </p>
+    
+    
+    <form action="">
+	<input type="radio" name= @survey.answerFourth1 value= @survey.answerFourth1 > @survey.answerFourth1 <br> <br>
+	<input type="radio" name= @survey.answerFourth1 value= @survey.answerFourth2 > @survey.answerFourth2 <br> <br>
+	
+    
+
+     @if(survey.answerFourth3 == null || survey.answerFourth3 == "") {
+            
+        } else {
+            <input type="radio" name= @survey.answerFourth1 value= @survey.answerFourth3 > @survey.answerFourth3 <br> <br>
+        }
+
+     @if(survey.answerFourth4 == null || survey.answerFourth4 == "") {
+
+        } else {
+            <input type="radio" name= @survey.answerFourth1 value= @survey.answerFourth4 > @survey.answerFourth4 <br> <br>
+        }
+     
+     <h6>5. Question</h6>
+    
+    <p>
+        <b>@survey.question5</b>
+    </p>
+    
+    
+    <form action="">
+	<input type="radio" name= @survey.answerFifth1 value= @survey.answerFifth1 > @survey.answerFifth1 <br> <br>
+	<input type="radio" name= @survey.answerFifth1 value= @survey.answerFifth2 > @survey.answerFifth2 <br> <br>
+	
+    
+
+     @if(survey.answerFifth3 == null || survey.answerFifth3 == "") {
+            
+        } else {
+            <input type="radio" name= @survey.answerFifth1 value= @survey.answerFifth3 > @survey.answerFifth3 <br> <br>
+        }
+
+     @if(survey.answerFifth4 == null || survey.answerFifth4 == "") {
+
+        } else {
+            <input type="radio" name= @survey.answerFifth1 value= @survey.answerFifth4 > @survey.answerFifth4 <br> <br>
+        }
+     
+      <div class="actions">
+            <input type="submit" class="btn primary" value="Send">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+     }
+    
+}

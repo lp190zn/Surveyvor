@@ -1,0 +1,41 @@
+@(surveys: List[Survey])
+
+@import helper._
+
+@mainAfter(Html("Work with your Surveys!")) {
+    
+    <h2>Create a survey</h2>
+    
+    <p>
+        Create a new survey easy!
+    </p>
+    
+    <p>
+        <a class="btn" href="@routes.CreateSurvey.blank">Create a survey »</a>
+    </p>
+    
+    <h1>@surveys.size() surveys</h1>
+    
+    
+        @for(survey <- surveys) {
+		<a class="btn primary" href="/surveys/@survey.title"><b>@survey.title »</b></a>
+		<b> >> Link:</b> http://localhost:9000/surveys/@survey.title
+
+		</br>
+		</br>
+
+		@form(routes.CreateSurvey.delete(survey.id), 'class -> "topLeft") {
+		<input type="submit" value="Delete this survey" class="btn danger">
+		}
+
+		
+		@form(routes.CreateSurvey.edit(survey.id), 'class -> "topLeft") {
+		<input type="submit" value="Edit this survey" class="btn">
+		}
+		
+		</br>
+		</br>
+                       
+        }
+
+}

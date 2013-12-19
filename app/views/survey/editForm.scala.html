@@ -1,0 +1,206 @@
+	@(id: Long, surveyForm: Form[Survey])
+	@import helper._
+	@import helper.twitterBootstrap._
+	@title = {
+	<small>Edit a survey</small>
+	}
+	@mainAfter(title, nav = "Edit Survey") {
+	@helper.form(action = routes.CreateSurvey.update(id)) {
+	<fieldset>
+	@inputText(
+	surveyForm("title"), 
+	'_label -> "Title"
+	)
+	</fieldset>
+	<fieldset>
+	<legend>Write question and its answers</legend>
+	
+	@inputText(
+	surveyForm("question1"), 
+	'_label -> "1.Question" 
+	)
+	</fieldset> 
+	
+	<fieldset>
+	
+	@inputText(
+	surveyForm("answerFirst1"), 
+	'_label -> "answer1" 
+	
+	)
+	@inputText(
+	surveyForm("answerFirst2"), 
+	'_label -> "answer2"
+	
+	)
+	@inputText(
+	surveyForm("answerFirst3"), 
+	'_label -> "answer3"
+	)
+	@inputText(
+	surveyForm("answerFirst4"), 
+	'_label -> "answer4"
+	)
+	
+	@inputText(
+	surveyForm("rightAnswerFirst"), 
+	'_label -> "rightAnswer"
+	)
+	</fieldset>
+	
+	<fieldset>
+	<legend>Write question and its answers</legend>
+	
+	@inputText(
+	surveyForm("question2"), 
+	'_label -> "2.Question"
+	)
+	</fieldset> 
+	
+	<fieldset>
+	
+	@inputText(
+	surveyForm("answerSec1"), 
+	'_label -> "answer1"
+	
+	)
+	@inputText(
+	surveyForm("answerSec2"), 
+	'_label -> "answer2" 
+	
+	)
+	@inputText(
+	surveyForm("answerSec3"), 
+	'_label -> "answer3"
+	)
+	@inputText(
+	surveyForm("answerSec4"), 
+	'_label -> "answer4"
+	)
+	
+	@inputText(
+	surveyForm("rightAnswerSec"), 
+	'_label -> "rightAnswer"
+	)
+	</fieldset>
+	
+	<fieldset>
+	<legend>Write question and its answers</legend>
+	
+	@inputText(
+	surveyForm("question3"), 
+	'_label -> "3.Question"
+	)
+	</fieldset> 
+	
+	<fieldset>
+	
+	@inputText(
+	surveyForm("answerThird1"), 
+	'_label -> "answer1"
+	
+	)
+	@inputText(
+	surveyForm("answerThird2"), 
+	'_label -> "answer2"
+	
+	)
+	@inputText(
+	surveyForm("answerThird3"), 
+	'_label -> "answer3"
+	)
+	@inputText(
+	surveyForm("answerThird4"), 
+	'_label -> "answer4"
+	)
+	
+	@inputText(
+	surveyForm("rightAnswerThird"), 
+	'_label -> "rightAnswer"
+	)
+	</fieldset>
+	
+	<fieldset>
+	<legend>Write question and its answers</legend>
+	
+	@inputText(
+	surveyForm("question4"), 
+	'_label -> "4.Question"
+	)
+	</fieldset> 
+	
+	<fieldset>
+	
+	@inputText(
+	surveyForm("answerFourth1"), 
+	'_label -> "answer1"
+	
+	)
+	@inputText(
+	surveyForm("answerFourth2"), 
+	'_label -> "answer2"
+	
+	
+	)
+	@inputText(
+	surveyForm("answerFourth3"), 
+	'_label -> "answer3"
+	)
+	@inputText(
+	surveyForm("answerFourth4"), 
+	'_label -> "answer4"
+	)
+	
+	@inputText(
+	surveyForm("rightAnswerFourth"), 
+	'_label -> "rightAnswer"
+	)
+	</fieldset>
+	
+	<fieldset>
+	<legend>Write question and its answers</legend>
+	
+	@inputText(
+	surveyForm("question5"), 
+	'_label -> "5.Question"
+	)
+	</fieldset> 
+	
+	<fieldset>
+	
+	@inputText(
+	surveyForm("answerFifth1"), 
+	'_label -> "answer1"
+	
+	)
+	@inputText(
+	surveyForm("answerFifth2"), 
+	'_label -> "answer2"
+	
+	)
+	@inputText(
+	surveyForm("answerFifth3"), 
+	'_label -> "answer3"
+	)
+	@inputText(
+	surveyForm("answerFifth4"), 
+	'_label -> "answer4"
+	)
+	
+	@inputText(
+	surveyForm("rightAnswerFifth"), 
+	'_label -> "rightAnswer"
+	)
+	</fieldset>
+	
+	
+	<div class="actions">
+	<input type="submit" class="btn primary" value="Save">
+	<a href="@routes.CreateSurvey.newIndex" class="btn">Cancel</a>
+	@form(routes.CreateSurvey.delete(id), 'class -> "topRight") {
+	<input type="submit" value="Delete this survey" class="btn danger">
+	}
+	</div>
+	}
+	
+	}
